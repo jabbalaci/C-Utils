@@ -10,7 +10,7 @@
 // ##########
 
 // if mem. allocation fails
-void mem_error_exit()
+void mem_error_exit(void)
 {
     fprintf(stderr, "Error: cannot allocate memory\n");
     exit(1);
@@ -36,7 +36,7 @@ void free_nodes(LinkedListInt *self)
 // #########
 
 // create an empty singly linked list object
-LinkedListInt * ll_create()
+LinkedListInt * ll_create(void)
 {
     LinkedListInt *result = malloc(sizeof(LinkedListInt));
     if (result == NULL) {
@@ -60,7 +60,7 @@ void ll_clear(LinkedListInt *self)
     self->length = 0;
 }
 
-bool ll_empty(LinkedListInt *self)
+bool ll_empty(const LinkedListInt *self)
 {
     return (self->head == NULL);
 }
@@ -108,7 +108,7 @@ int ll_popleft(LinkedListInt *self)
 }
 
 // print the elements (for debugging purposes)
-void ll_print(LinkedListInt *self)
+void ll_print(const LinkedListInt *self)
 {
     SLL_Node *curr = self->head;
     while (curr != NULL)

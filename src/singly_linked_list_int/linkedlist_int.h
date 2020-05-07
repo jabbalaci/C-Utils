@@ -15,10 +15,10 @@ typedef struct {
     int length;    // number of inserted elements
 } LinkedListInt;
 
-LinkedListInt * ll_create();
+LinkedListInt * ll_create(void);
 void ll_clear(LinkedListInt *self);
-bool ll_empty(LinkedListInt *self);
+bool ll_empty(const LinkedListInt *self);
 void ll_append(LinkedListInt *self, int data);
 int ll_popleft(LinkedListInt *self);
-void ll_print(LinkedListInt *self);
+void ll_print(const LinkedListInt *self);
 void * ll_destroy(LinkedListInt *self);

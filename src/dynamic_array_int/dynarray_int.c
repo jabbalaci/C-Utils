@@ -8,7 +8,7 @@
 // ##########
 
 // if mem. allocation fails
-void mem_error_exit()
+void mem_error_exit(void)
 {
     fprintf(stderr, "Error: cannot allocate memory\n");
     exit(1);
@@ -28,7 +28,7 @@ int da_cmp(const void *left, const void *right)
 // #########
 
 // create a new dynamic array object
-DynArrayInt * da_create()
+DynArrayInt * da_create(void)
 {
     DynArrayInt *result = malloc(sizeof(DynArrayInt));
     if (result == NULL) {
@@ -71,7 +71,7 @@ void da_append(DynArrayInt *self, int data)
 }
 
 // print the elements of the dynamic array (for debugging purposes)
-void da_print(DynArrayInt *self)
+void da_print(const DynArrayInt *self)
 {
     for (int i = 0; i < self->length; ++i) {
         printf("%d ", self->elems[i]);

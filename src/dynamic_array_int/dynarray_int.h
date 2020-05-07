@@ -11,9 +11,9 @@ typedef struct {
                    // capacity must be >= length
 } DynArrayInt;
 
-DynArrayInt * da_create();
+DynArrayInt * da_create(void);
 void da_clear(DynArrayInt *self);
 void da_append(DynArrayInt *self, int data);
-void da_print(DynArrayInt *self);
+void da_print(const DynArrayInt *self);
 void da_sort(DynArrayInt *self);
 void * da_destroy(DynArrayInt *self);

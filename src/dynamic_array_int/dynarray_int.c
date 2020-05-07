@@ -3,12 +3,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// if mem. allocations fails
+// ##########
+// private ##
+// ##########
+
+// if mem. allocation fails
 void mem_error_exit()
 {
     fprintf(stderr, "Error: cannot allocate memory\n");
     exit(1);
 }
+
+// compare two integers
+int da_cmp(const void *left, const void *right)
+{
+    const int *a = left;
+    const int *b = right;
+
+    return *a - *b;
+}
+
+// #########
+// public ##
+// #########
 
 // create a new dynamic array object
 DynArrayInt * da_create()
@@ -60,6 +77,12 @@ void da_print(DynArrayInt *self)
         printf("%d ", self->elems[i]);
     }
     puts("");
+}
+
+// sort in place
+void da_sort(DynArrayInt *self)
+{
+    qsort(self->elems, self->length, sizeof(int), da_cmp);
 }
 
 // destroy the object and free the allocated mem. areas

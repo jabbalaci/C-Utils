@@ -25,6 +25,15 @@ int main()
     for (int i = 10; i <= 15; ++i) {
         da_append(li, i);
     }
+    for (int i = 1; i <= 5; ++i) {
+        da_append(li, i);
+    }
+
+    da_print(li);
+
+    da_sort(li);
+
+    puts("------------");
 
     da_print(li);
 

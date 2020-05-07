@@ -3,9 +3,9 @@
 #include "dynarray_int.h"
 
 /*
-    A simple example that demonstrates how to use our
-    dynamic array. DynArrayInt can only store integers,
-    it's not generic.
+    A simple example that demonstrates how to use our dynamic array.
+
+    DynArrayInt can only store integers, it's not generic.
 */
 
 int main()

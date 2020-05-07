@@ -4,9 +4,9 @@
 #include "linkedlist_int.h"
 
 /*
-    A simple example that demonstrates how to use our
-    singly linked list. It can only store integers,
-    it's not generic.
+    A simple example that demonstrates how to use our singly linked list.
+
+    It can only store integers, it's not generic.
 */
 
 int main()

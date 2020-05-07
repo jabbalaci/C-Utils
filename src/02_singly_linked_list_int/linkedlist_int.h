@@ -3,9 +3,9 @@
 #include <stdbool.h>
 
 // singly linked list node
-typedef struct sll_node {
+typedef struct _sll_node {
     int data;
-    struct sll_node *next;
+    struct _sll_node *next;
 } SLL_Node;
 
 // singly linked list
